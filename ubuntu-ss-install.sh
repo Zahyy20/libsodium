@@ -61,10 +61,10 @@ install_libsodium(){
         echo "\033[1;32mLibsodium already installed, skip.\033[0m"
     else
         if [ ! -f libsodium-$LIBSODIUM_VER.tar.gz ];then
-            wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz -O libsodium-$LIBSODIUM_VER.tar.gz
+            wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz -O libsodium-$LATEST.tar.gz
         fi
-        tar xf libsodium-$LIBSODIUM_VER.tar.gz
-        cd libsodium-$LIBSODIUM_VER
+        tar xf libsodium-$LATEST.tar.gz
+        cd libsodium-$LATEST.tar.gz
         ./configure --prefix=/usr && make
         make install
         cd ..
